@@ -50,27 +50,4 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
-
-    var price1NFT = document.getElementById('price1NFT');
-    var price2NFT = document.getElementById('price2NFT');
-    var price5NFT = document.getElementById('price5NFT');
-
-
-    var purchaseSelect = document.getElementById('purchaseSelect');
-    purchaseSelect.addEventListener('change', function(e) {
-        var option = e.target.value;
-        var price;
-        if (isNaN(option)) document.getElementById('purchaseDetail').style.display = "none";
-        else {
-            if (option == 1) {
-                price = 30;
-            } else if (option == 2) {
-                price = 60;
-            }
-            price1NFT.innerHTML = price * 1 + 2;
-            price2NFT.innerHTML = price * 2 + 2;
-            price5NFT.innerHTML = price * 5 + 2;
-            document.getElementById('purchaseDetail').style.display = "block";
-        }
-    })
 });
